@@ -15,8 +15,7 @@ This is not a mental health app. It’s a **product experiment in applied AI, pe
 
 ## 🎥 Demo Video
 
-📺 **Live Demo:** [YouTube Link Here]  
-*(Recommended with sound — voice synthesis is part of the experience)*
+📺 **Live Demo:** https://youtu.be/9vDfxj-qKQ0
 
 ---
 
