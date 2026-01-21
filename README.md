@@ -17,11 +17,13 @@ This is not a mental health app. It’s a **product experiment in applied AI, pe
 ## 🧩 Why It Exists
 
 Most AI “therapy” tools try to:
+
 ✔ cheer you on  
 ✔ remove discomfort  
 ✔ avoid confrontation  
 
 NotHelper does the opposite:
+
 ✘ discomfort is the point  
 ✘ confrontation is the mechanic  
 ✘ humor is the coping strategy  
