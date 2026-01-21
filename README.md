@@ -100,19 +100,29 @@ The result is a **guided comedic arc**, not an open chat box.
 - **Voice:** Synthesis + timing + text rendering
 - **State:** Client session state machine (multi-step journey)
 
-[User]
-   ↓
-[Web Client — Next.js]
-   ↓ (WebSocket)
-[Session Gateway — NestJS]
-   ↓
-[Persona Engine]
-   ↓
-[LLM — Gemini 1.5 Flash]
-   ↓
-[Voice Synth — ElevenLabs]
-   ↓ (WebSocket)
-[Web Client — audio + transcript]
+---
+
+## High-Level Data Flow
+
+A typical user message moves through the system as follows:
+
+1. **Web Client (Next.js)**
+   Captures user input and streams via WebSockets.
+
+2. **Session Gateway (NestJS)**
+   Manages session state and routes requests.
+
+3. **Persona Engine**
+   Applies persona constraints, memory, probing behaviors, and refusal rules.
+
+4. **LLM Layer (Gemini 1.5 Flash)**
+   Generates the actual therapist response content.
+
+5. **Voice Synthesis (ElevenLabs)**
+   Converts the textual response into playable audio.
+
+6. **Web Client**
+   Receives audio + transcript over WebSockets and renders the session UI.
 
 ---
 
