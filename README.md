@@ -14,57 +14,50 @@ This is not a mental health app. It’s a **product experiment in applied AI, pe
 
 ---
 
-## 🧩 What It Does
+## 🧩 Why It Exists
 
-The product guides users through a tongue-in-cheek journey:
+Most AI “therapy” tools try to:
+✔ cheer you on  
+✔ remove discomfort  
+✔ avoid confrontation  
 
-1. **Damage Assessment** — users self-report personality “issues”
-2. **Therapist Selection** — choose from a roster of emotionally unavailable AI clinicians
-3. **Reality Check** — contextual micro-insights based on time/day/choices
-4. **Loading Sequence** — multi-stage sarcastic loader with fake error states
-5. **Therapy Chat** — real-time session with voice, typing indicators, persona behavior
-6. **The Disappointing Conclusion** — session summary + zero growth achieved
+NotHelper does the opposite:
+✘ discomfort is the point  
+✘ confrontation is the mechanic  
+✘ humor is the coping strategy  
 
 The goal:  
 > **Simulate therapy… badly.**
 
 ---
 
-## 🧠 Why This Exists
+## 🙋 User Experience Flow
 
-This project explores:
+A full session typically looks like:
 
-- **AI as character**, not assistant
-- **Voice synthesis as UX**, not accessibility
-- **Contextual humor** based on timing & input
-- **Persona-driven LLM prompts**
-- **Real-time interaction loops**
-- **Satire as interface**
-- **User state as narrative**
+1. **Damage Assessment** (what's wrong with you)
+2. **Therapist Selection** (which persona ruins your day)
+3. **Reality Check** (contextual humor based on time & behavior)
+4. **Voice Session** (real-time back & forth over WebSockets)
+5. **Sarcastic Summary** (negative progress report)
 
-Not Helping™ reframes AI from  
-> “How can AI solve problems?”  
-to  
-> “How can AI make things worse… entertainingly?”
+Users describe it as  
+> “weirdly honest and mildly therapeutic against my will.”
 
 ---
 
-## 🎭 Therapist Personalities
+## 🎭 Therapist Personas
 
-Each therapist has:
+Each therapist has a unique voice, tone, cadence, and worldview:
 
-✔ distinct voice  
-✔ prompt persona  
-✔ conversational style  
-✔ psychological flaws  
-✔ professional incompetence
+| Therapist | Vibe | Specialization |
+|---|---|---|
+| **Dr. Void** | Existential retail employee | Emotional numbness |
+| **Dr. Burnout** | Overworked clinician | Exhaustion & regret |
+| **Dr. Dread** | Catastrophizer | Negative forecasting |
+| **Dr. Karen** | Judgmental & confident | Shame-based motivation |
 
-Examples include:
-
-- **Dr. Void** — existential dread, low enthusiasm
-- **Dr. Burnout** — corporate trauma incarnate
-- **Dr. Dread** — bad vibes only
-- **Dr. Karen** — judgmental, high condescension
+No two sessions sound the same.
 
 ---
 
@@ -99,15 +92,27 @@ The result is a **guided comedic arc**, not an open chat box.
 
 ---
 
-## 🧩 Technology Summary (Non-Exhaustive)
-
-To avoid leaking implementation details or prompts, this is intentionally high-level:
+## 🧩 High Level Architecture + Design
 
 - **Frontend:** React + Next.js + Tailwind (mostly client mode)
 - **LLM layer:** Applied AI + persona pipelines
 - **Socket layer:** Real-time events for chat, typing, voice playback
 - **Voice:** Synthesis + timing + text rendering
 - **State:** Client session state machine (multi-step journey)
+
+[User]
+   ↓
+[Web Client — Next.js]
+   ↓ (WebSocket)
+[Session Gateway — NestJS]
+   ↓
+[Persona Engine]
+   ↓
+[LLM — Gemini 1.5 Flash]
+   ↓
+[Voice Synth — ElevenLabs]
+   ↓ (WebSocket)
+[Web Client — audio + transcript]
 
 ---
 
@@ -152,17 +157,6 @@ This project resonates with:
 
 ---
 
-## 📦 Availability
-
-_Not Helping™_ is currently **closed-source**  
-because the interesting value lies in:
-
-> prompts, personas, pipelines, voice sequencing, & timing
-
-A public demo and walkthrough are available in the video above.
-
----
-
 ## 📝 Legal & Ethical Notes
 
 - Not intended for real mental health use
@@ -176,5 +170,5 @@ A public demo and walkthrough are available in the video above.
 ## © Attribution
 
 _Not Helping™_ — 2025–2026  
-A creative product experiment by **[Your Name]**
+A creative product experiment by **[Dawood Hamayun]**
 
