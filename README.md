@@ -5,6 +5,12 @@ _Not Helping™_ is a satirical AI therapy experience featuring multiple therapi
 
 This is not a mental health app. It’s a **product experiment in applied AI, persona design, and interactive storytelling.**
 
+<p align="center">
+  <img src="./assets/nothelper.gif" width="800">
+  <br/>
+  <em>Demo — persona selection → session</em>
+</p>
+
 ---
 
 ## 🎥 Demo Video
